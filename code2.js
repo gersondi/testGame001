@@ -34,7 +34,29 @@ gdjs.room_322_32monitorCode.condition2IsTrue_0 = {val:false};
 
 
 gdjs.room_322_32monitorCode.mapOfGDgdjs_46room_95322_9532monitorCode_46GDclickableObjects1Objects = Hashtable.newFrom({"clickable": gdjs.room_322_32monitorCode.GDclickableObjects1});
+gdjs.room_322_32monitorCode.mapOfGDgdjs_46room_95322_9532monitorCode_46GDRightObjects2Objects = Hashtable.newFrom({"Right": gdjs.room_322_32monitorCode.GDRightObjects2});
 gdjs.room_322_32monitorCode.eventsList0 = function(runtimeScene) {
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Right"), gdjs.room_322_32monitorCode.GDRightObjects2);
+
+gdjs.room_322_32monitorCode.condition0IsTrue_0.val = false;
+gdjs.room_322_32monitorCode.condition1IsTrue_0.val = false;
+{
+gdjs.room_322_32monitorCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.room_322_32monitorCode.mapOfGDgdjs_46room_95322_9532monitorCode_46GDRightObjects2Objects, runtimeScene, true, false);
+}if ( gdjs.room_322_32monitorCode.condition0IsTrue_0.val ) {
+{
+gdjs.room_322_32monitorCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+}}
+if (gdjs.room_322_32monitorCode.condition1IsTrue_0.val) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "room 3 email", false);
+}}
+
+}
+
+
+};gdjs.room_322_32monitorCode.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -73,9 +95,12 @@ for(var i = 0, k = 0, l = gdjs.room_322_32monitorCode.GDPasswordTextObjects2.len
 gdjs.room_322_32monitorCode.GDPasswordTextObjects2.length = k;}if (gdjs.room_322_32monitorCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("textBox"), gdjs.room_322_32monitorCode.GDtextBoxObjects2);
 {for(var i = 0, len = gdjs.room_322_32monitorCode.GDtextBoxObjects2.length ;i < len;++i) {
-    gdjs.room_322_32monitorCode.GDtextBoxObjects2[i].setString("PC unlocked. Let's send out a malicious email");
+    gdjs.room_322_32monitorCode.GDtextBoxObjects2[i].setString("PC unlocked. Let's send out a malicious email. Goto next screen");
 }
-}}
+}
+{ //Subevents
+gdjs.room_322_32monitorCode.eventsList0(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -104,7 +129,7 @@ gdjs.copyArray(runtimeScene.getObjects("textBox"), gdjs.room_322_32monitorCode.G
 
 
 };gdjs.room_322_32monitorCode.mapOfGDgdjs_46room_95322_9532monitorCode_46GDLeftObjects1Objects = Hashtable.newFrom({"Left": gdjs.room_322_32monitorCode.GDLeftObjects1});
-gdjs.room_322_32monitorCode.eventsList1 = function(runtimeScene) {
+gdjs.room_322_32monitorCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -136,7 +161,7 @@ gdjs.room_322_32monitorCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouse
 if (gdjs.room_322_32monitorCode.condition1IsTrue_0.val) {
 
 { //Subevents
-gdjs.room_322_32monitorCode.eventsList0(runtimeScene);} //End of subevents
+gdjs.room_322_32monitorCode.eventsList1(runtimeScene);} //End of subevents
 }
 
 }
@@ -194,7 +219,7 @@ gdjs.room_322_32monitorCode.GDButtonObjects1.length = 0;
 gdjs.room_322_32monitorCode.GDButtonObjects2.length = 0;
 gdjs.room_322_32monitorCode.GDButtonObjects3.length = 0;
 
-gdjs.room_322_32monitorCode.eventsList1(runtimeScene);
+gdjs.room_322_32monitorCode.eventsList2(runtimeScene);
 
 return;
 
